@@ -1,0 +1,6 @@
+.resource_server.go.swp
+.terraform
+terraform-provider-example
+terraform.tfstate
+terraform.tfstate.backup
+
