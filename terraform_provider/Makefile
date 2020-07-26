@@ -1,5 +1,5 @@
 provider:
-	echo "Hello"
+	echo "Building Terraform Provider"
 
 build:
 	GO111MODULE=on go build -o terraform-provider-example
