@@ -1,7 +1,11 @@
 provider:
 	echo "Building Terraform Provider"
 
+test:
+	GO111MODULE=on go test
+
 build:
+	GO111MODULE=on go mod tidy
 	GO111MODULE=on go build -o terraform-provider-example
 
 clean:
@@ -17,4 +21,4 @@ compile:
 	GOOS=linux GOARCH=arm64 go build -o terraform-provider-example
 	GOOS=freebsd GOARCH=386 go build -o terraform-provider-example
 
-all: provider build
+all: provider test build
